@@ -1,7 +1,7 @@
 [![License][license badge]][license]
 
 # Welp
-A macOS help book alternative
+A macOS help book alternative that shouldn't need to exist.
 
 The help book format for macOS is effectively abandoned. I'd like to explore building something that is easier to work with. This project is currently just an exploration.
 
