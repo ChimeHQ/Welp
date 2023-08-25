@@ -1,11 +1,47 @@
 import Cocoa
+import SwiftUI
+
+struct ContentView: View {
+	var body: some View {
+		Text("jello")
+			.toolbar {
+				ToolbarItem(placement: .navigation) {
+					Button(action: toggleSidebar, label: {
+						Image(systemName: "sidebar.leading")
+					})
+				}
+			}
+			.frame(maxWidth: .infinity, maxHeight: .infinity)
+	}
+
+	private func toggleSidebar() {
+	}
+}
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-	@IBOutlet var window: NSWindow!
+	lazy var window: NSWindow = {
+		let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 300),
+							  styleMask: [.titled, .closable, .unifiedTitleAndToolbar, .resizable],
+							  backing: .buffered,
+							  defer: true)
+
+		return window
+	}()
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		NSApp.registerUserInterfaceItemSearchHandler(self)
+
+		window.title = "Something Help"
+		window.contentView = NSHostingView(rootView: ContentView())
+		window.toolbarStyle = .unifiedCompact
+		window.setContentSize(NSSize(width: 400, height: 300))
+		window.center()
+
+		window.makeKeyAndOrderFront(self)
+
+
+//		window.styleMask.update(with: .unifiedTitleAndToolbar)
 	}
 
 	func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
