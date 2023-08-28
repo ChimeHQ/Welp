@@ -3,7 +3,26 @@
 # Welp
 A macOS help book alternative that shouldn't need to exist.
 
-The help book format for macOS is effectively abandoned. I'd like to explore building something that is easier to work with. This project currently doesn't actually do anything.
+The help book format for macOS is effectively abandoned. I'd like to explore building something that is easier to work with.
+
+## Usage
+
+Provides an interface to the `NSUserInterfaceItemSearching` API.
+
+```swift
+Help.register(Help.Handlers(items: searchItems, allTopics: allTopics))
+
+func searchItems(_ query: String, limit: Int) async -> [Help.Item] {
+    // perform your query and produce at most `limit` items
+    
+    return items
+}
+
+@MainActor
+func allTopics(_ query: String) {
+    // Handle the "Show All Help Topics" items for a given query string 
+}
+```
 
 ## Suggestions or Feedback
 

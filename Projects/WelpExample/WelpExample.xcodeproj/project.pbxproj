@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C97918B12A9D330B0046EAF1 /* Welp in Frameworks */ = {isa = PBXBuildFile; productRef = C97918B02A9D330B0046EAF1 /* Welp */; };
 		C9D3700B2900C0150050984D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3700A2900C0150050984D /* AppDelegate.swift */; };
 		C9D3700D2900C0160050984D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D3700C2900C0160050984D /* Assets.xcassets */; };
 		C9D370102900C0160050984D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D3700E2900C0160050984D /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C97918AC2A9D32F40046EAF1 /* Welp */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Welp; path = ../..; sourceTree = "<group>"; };
 		C9D370072900C0150050984D /* WelpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WelpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D3700A2900C0150050984D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9D3700C2900C0160050984D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,17 +27,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97918B12A9D330B0046EAF1 /* Welp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C97918AF2A9D330B0046EAF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9D36FFE2900C0150050984D = {
 			isa = PBXGroup;
 			children = (
+				C97918AC2A9D32F40046EAF1 /* Welp */,
 				C9D370092900C0150050984D /* WelpExample */,
 				C9D370082900C0150050984D /* Products */,
+				C97918AF2A9D330B0046EAF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +84,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				C97918AE2A9D33070046EAF1 /* PBXTargetDependency */,
 			);
 			name = WelpExample;
+			packageProductDependencies = (
+				C97918B02A9D330B0046EAF1 /* Welp */,
+			);
 			productName = WelpExample;
 			productReference = C9D370072900C0150050984D /* WelpExample.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +149,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C97918AE2A9D33070046EAF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C97918AD2A9D33070046EAF1 /* Welp */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C9D3700E2900C0160050984D /* MainMenu.xib */ = {
@@ -268,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GXRS83U4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -293,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GXRS83U4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -331,6 +356,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C97918AD2A9D33070046EAF1 /* Welp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Welp;
+		};
+		C97918B02A9D330B0046EAF1 /* Welp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Welp;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9D36FFF2900C0150050984D /* Project object */;
 }
