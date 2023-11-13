@@ -3,13 +3,14 @@ Tooling for macOS help books.
 
 The help book format for macOS is effectively abandoned. Yet, it still remains one of the best ways to deliver in-app help content. Nearly all of the built-in macOS apps use it. But, it can be a real struggle. Welp is all about building tooling to make the process easier.
 
-The project has four components:
+The project has five components:
 
 - `Welp` library for working with help books programmatically
 - `welp` cli tool for help book automation
+- `Help Book.xctemplate` an Xcode template that sets up a help book bundle target
 - `WelpBook` a (very) experimental library that replaces the help book format entirely
 
-I have some JavaScript here that is needed to drive the in-browser navigation system. It does not work quite yet, and I also do not know the best way to distribute it. If you have ideas here, I'd love some help!
+I have some [JavaScript](Help\ Book.xctemplate/helpbook.js) here that is needed to drive the in-browser navigation system. It does not work quite yet, and I also do not know the best way to distribute it. If you have ideas here, I'd love some help!
 
 ## Installation
 
@@ -37,6 +38,16 @@ targets: [
 ## Tool Usage
 
 *forthcoming - tool needs to be built first*
+
+## Template Usage
+
+First, the template must be installed. The on-disk path determines where Xcode displays it in its UI. These instructions place it in `macOS` > `Other`, under the `Project Templates` main group.
+
+```bash
+cd Welp
+mkdir -p ~/Library/Developer/Xcode/Templates/Project\ Templates/macOS/Other
+cp -r Help\ Book.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/macOS/Other/
+```
 
 ## WelpBook Usage
 

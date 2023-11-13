@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.chimehq.HelpBookBundle</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.bundleBase</string>
+		<string>com.apple.dt.unit.osxBase</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>DefaultCompletionName</key>
+	<string>HelpBook</string>
+	<key>Description</key>
+	<string>This template creates an empty macOS help book bundle.</string>
+	<key>TargetOnly</key>
+	<true/>
+	<key>AssociatedTargetSpecification</key>
+	<dict>
+		<key>PopUpTitle</key>
+		<string>Embed in Application:</string>
+		<key>PopUpDescription</key>
+		<string>The application target that will host this new help book. The application will be set up to embed the new framework.</string>
+		<key>AllowableProductTypes</key>
+		<array>
+			<string>com.apple.product-type.application</string>
+		</array>
+		<key>AssociatedTargetIsDependent</key>
+		<true/>
+		<key>AssociatedTargetNeedsProductBuildPhaseInjection</key>
+		<true/>
+	</dict>
+	
+	<key>Image</key>
+	<dict>
+		<key>SystemSymbolName</key>
+		<string>book</string>
+	</dict>
+	<key>Project</key>
+	<dict>
+		<key>Configurations</key>
+		<dict>
+			<key>Debug</key>
+			<dict/>
+			<key>Release</key>
+			<dict/>
+		</dict>
+	</dict>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>ProductType</key>
+			<string>com.apple.product-type.bundle</string>
+			<key>TargetIdentifier</key>
+			<string>com.apple.dt.bundleTarget</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Bundles</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>help</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>INFOPLIST_KEY_NSPrincipalClass</key>
+				<string></string>
+				<key>INFOPLIST_KEY_NSHumanReadableCopyright</key>
+				<string>___COPYRIGHT___</string>
+				<key>INFOPLIST_FILE</key>
+				<string>___PACKAGENAME___/Info.plist</string>
+			</dict>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>Sources</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Frameworks</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Resources</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>Nodes</key>
+	<array>
+		<string>Info.plist:helpBook</string>
+		<string>en.lproj/index.html</string>
+		<string>helpbook.js</string>
+	</array>
+	<key>Definitions</key>
+	<dict>
+		<key>Info.plist:helpBook</key>
+		<string><![CDATA[<key>HPDBookTitle</key>
+<string>___PACKAGENAMEASXML___ Help</string>
+<key>HPDBookAccessPath</key>
+<string>index.html</string>
+<key>HPDBookKBProduct</key>
+<string>___PACKAGENAMEASXML___1</string>
+<key>HPDBookCSIndexPath</key>
+<string>___PACKAGENAMEASXML___.cshelpindex</string>
+<key>HPDBookIndexPath</key>
+<string>___PACKAGENAMEASXML___.helpindex</string>
+<key>HPDBookType</key>
+<string>3</string>
+<key>CFBundleSignature</key>
+<string>hbwr</string>
+]]></string>
+		<key>en.lproj/index.html</key>
+		<dict>
+			<key>Path</key>
+			<string>index.html</string>
+		</dict>
+		<key>helpbook.js</key>
+		<dict>
+			<key>Path</key>
+			<string>helpbook.js</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
