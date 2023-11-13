@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'CODE_OF_CONDUCT.md'
+      - '.editorconfig'
+      - '.spi.yml'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Test
+    runs-on: macOS-13
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate template
+        run: plutil -lint "Help Book.xctemplate/TemplateInfo.plist"
+      - name: Install XCBeautify
+        run: brew install xcbeautify
+      - name: Test
+        run: set -o pipefail && xcodebuild -scheme Welp-Package -destination "platform=macOS" test | xcbeautify --renderer github-actions
