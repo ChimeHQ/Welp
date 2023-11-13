@@ -31,8 +31,6 @@
 		</array>
 		<key>AssociatedTargetIsDependent</key>
 		<true/>
-		<key>AssociatedTargetNeedsProductBuildPhaseInjection</key>
-		<true/>
 	</dict>
 	
 	<key>Image</key>
@@ -95,6 +93,7 @@
 	<array>
 		<string>Info.plist:helpBook</string>
 		<string>en.lproj/index.html</string>
+		<string>en.lproj/InfoPlist.strings</string>
 		<string>helpbook.js</string>
 	</array>
 	<key>Definitions</key>
@@ -120,6 +119,11 @@
 			<key>Path</key>
 			<string>index.html</string>
 		</dict>
+		<key>en.lproj/InfoPlist.strings</key>
+		<string><![CDATA[HPDBookTitle = "___PACKAGENAMEASXML___ Help";
+CFBundleDisplayName = "___PACKAGENAMEASXML___ Help";
+NSHumanReadableCopyright = "___COPYRIGHT___"
+]]></string>
 		<key>helpbook.js</key>
 		<dict>
 			<key>Path</key>
