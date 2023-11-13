@@ -1,3 +1,5 @@
+[![Build Status][build status badge]][build status]
+
 # Welp
 Tooling for macOS help books.
 
@@ -83,3 +85,6 @@ I prefer collaboration, and would love to find ways to work together if you have
 I prefer indentation with tabs for improved accessibility. But, I'd rather you use the system you want and make a PR than hesitate because of whitespace.
 
 By participating in this project you agree to abide by the [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+
+[build status]: https://github.com/ChimeHQ/Welp/actions
+[build status badge]: https://github.com/ChimeHQ/Welp/workflows/CI/badge.svg
