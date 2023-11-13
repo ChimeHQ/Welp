@@ -1,11 +1,46 @@
 # Welp
-Tooling for macOS help books that shouldn't need to exist.
+Tooling for macOS help books.
 
-The help book format for macOS is effectively abandoned. I'd like to explore building something that is easier to work with.
+The help book format for macOS is effectively abandoned. Yet, it still remains one of the best ways to deliver in-app help content. Nearly all of the built-in macOS apps use it. But, it can be a real struggle. Welp is all about building tooling to make the process easier.
 
-## Usage
+The project has four components:
 
-Provides an interface to the `NSUserInterfaceItemSearching` API.
+- `Welp` library for working with help books programmatically
+- `welp` cli tool for help book automation
+- `WelpBook` a (very) experimental library that replaces the help book format entirely
+
+I have some JavaScript here that is needed to drive the in-browser navigation system. It does not work quite yet, and I also do not know the best way to distribute it. If you have ideas here, I'd love some help!
+
+## Installation
+
+Welp is available as both a command-line tool and a library.
+
+Tool:
+
+```
+brew tap ChimeHQ/Welp https://github.com/ChimeHQ/Welp.git
+brew install welp
+```
+
+Package:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/ChimeHQ/Welp", branch: "main")
+],
+targets: [
+    .target(name: "MyTarget", dependencies: ["Welp"]),
+	.target(name: "MyOtherTarget", dependencies: ["WelpBook"]),
+]
+```
+
+## Tool Usage
+
+*forthcoming - tool needs to be built first*
+
+## WelpBook Usage
+
+Please do keep in mind this is experimental. This provides an interface to the `NSUserInterfaceItemSearching` API.
 
 ```swift
 Help.register(Help.Handlers(items: searchItems, allTopics: allTopics))
@@ -21,6 +56,12 @@ func allTopics(_ query: String) {
     // Handle the "Show All Help Topics" items for a given query string 
 }
 ```
+
+## References
+
+- [Authoring Apple Help](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/ProvidingUserAssitAppleHelp/authoring_help/authoring_help_book.html)
+- [Authoring macOS Help Books in 2020 (and beyond)](https://marioaguzman.wordpress.com/2020/09/12/auth/)
+- [Why won't that help book open](https://eclecticlight.co/2021/11/16/why-wont-that-help-book-open/)
 
 ## Contributing and Collaboration
 

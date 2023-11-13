@@ -1,4 +1,4 @@
-# ``Welp``
+# ``WelpBook``
 
 A macOS help book alternative that shouldn't need to exist.
 
