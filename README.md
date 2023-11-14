@@ -51,6 +51,18 @@ mkdir -p ~/Library/Developer/Xcode/Templates/Project\ Templates/macOS/Other
 cp -r Help\ Book.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/macOS/Other/
 ```
 
+Unfortunately, this template is missing a few features. This means there are some extra steps required to make it actually work.
+
+#### Copy
+
+Add the help book bundle into your main app via the "Copy Bundle Resources" phase.
+
+I *thought* that `AssociatedTargetNeedsProductBuildPhaseInjection` would make this automatic, but I cannot figure out how to control how Xcode adds it into the associated target's build phases.
+
+#### Info.plist Addition
+
+I *think* it is necessary to add an entry into your main app's Info.plist. `CFBundleHelpBookFolder` should be set to `YourHelpBook.help`.
+
 ## WelpBook Usage
 
 Please do keep in mind this is experimental. This provides an interface to the `NSUserInterfaceItemSearching` API.

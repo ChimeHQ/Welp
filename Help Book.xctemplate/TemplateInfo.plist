@@ -71,6 +71,8 @@
 				<string>___COPYRIGHT___</string>
 				<key>INFOPLIST_FILE</key>
 				<string>___PACKAGENAME___/Info.plist</string>
+				<key>ENABLE_USER_SCRIPT_SANDBOXING</key>
+				<string>NO</string>
 			</dict>
 			<key>BuildPhases</key>
 			<array>
@@ -86,14 +88,37 @@
 					<key>Class</key>
 					<string>Resources</string>
 				</dict>
+				<dict>
+					<key>SortOrder</key>
+					<integer>0</integer>
+					<key>Name</key>
+					<string>Re-build Index</string>
+					<key>Class</key>
+					<string>ShellScript</string>
+					<key>ShellPath</key>
+					<string>/bin/sh</string>
+					<key>ShellScript</key>
+					<string><![CDATA[set -euxo pipefail
+
+cd "${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.help/Contents/Resources"
+
+for LANGUAGE in *.lproj;
+do
+	pushd "${LANGUAGE}"
+	hiutil -I corespotlight -Caf "${PRODUCT_NAME}.cshelpindex" -vv .
+	hiutil -I lsm -Caf "${PRODUCT_NAME}.helpindex" -vv .
+	hiutil -I corespotlight -Tvf "${PRODUCT_NAME}.cshelpindex"
+	popd
+done
+]]></string>
+				</dict>
 			</array>
 		</dict>
 	</array>
 	<key>Nodes</key>
 	<array>
 		<string>Info.plist:helpBook</string>
-		<string>en.lproj/index.html</string>
-		<string>en.lproj/InfoPlist.strings</string>
+		<string>Base.lproj/index.html</string>
 		<string>helpbook.js</string>
 	</array>
 	<key>Definitions</key>
@@ -114,16 +139,11 @@
 <key>CFBundleSignature</key>
 <string>hbwr</string>
 ]]></string>
-		<key>en.lproj/index.html</key>
+		<key>Base.lproj/index.html</key>
 		<dict>
 			<key>Path</key>
 			<string>index.html</string>
 		</dict>
-		<key>en.lproj/InfoPlist.strings</key>
-		<string><![CDATA[HPDBookTitle = "___PACKAGENAMEASXML___ Help";
-CFBundleDisplayName = "___PACKAGENAMEASXML___ Help";
-NSHumanReadableCopyright = "___COPYRIGHT___"
-]]></string>
 		<key>helpbook.js</key>
 		<dict>
 			<key>Path</key>
