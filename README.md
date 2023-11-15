@@ -12,7 +12,7 @@ The project has five components:
 - `Help Book.xctemplate` an Xcode template that sets up a help book bundle target
 - `WelpBook` a (very) experimental library that replaces the help book format entirely
 
-I have some [JavaScript](Help\ Book.xctemplate/helpbook.js) here that is needed to drive the in-browser navigation system. It does not work quite yet, and I also do not know the best way to distribute it. If you have ideas here, I'd love some help!
+I have some [JavaScript](Help%20Book.xctemplate/helpbook.js) here that is needed to drive the in-browser navigation system. It does not work quite yet, and I also do not know the best way to distribute it. If you have ideas here, I'd love some help!
 
 ## Installation
 
