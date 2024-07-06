@@ -12,19 +12,16 @@ on:
   pull_request:
     branches:
       - main
-
-env:
-  DEVELOPER_DIR: /Applications/Xcode_15.0.1.app/Contents/Developer
   
 jobs:
   test:
     name: Test
-    runs-on: macOS-13
+    runs-on: macOS-14
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.0.app/Contents/Developer
     steps:
       - uses: actions/checkout@v4
       - name: Validate template
         run: plutil -lint "Help Book.xctemplate/TemplateInfo.plist"
-      - name: Install XCBeautify
-        run: brew install xcbeautify
       - name: Test
-        run: set -o pipefail && xcodebuild -scheme Welp-Package -destination "platform=macOS" test | xcbeautify --renderer github-actions
+        run: set -o pipefail && xcodebuild -scheme Welp-Package -destination "platform=macOS" test | xcbeautify
