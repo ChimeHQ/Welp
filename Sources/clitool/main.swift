@@ -3,7 +3,7 @@ import ArgumentParser
 import Welp
 
 struct WelpCommand: ParsableCommand {
-	static var configuration = CommandConfiguration(commandName: "welp")
+	static let configuration = CommandConfiguration(commandName: "welp")
 
 	@Flag(
 		name: .shortAndLong,
