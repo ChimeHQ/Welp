@@ -1,4 +1,9 @@
+<div align="center">
+
 [![Build Status][build status badge]][build status]
+[![Matrix][matrix badge]][matrix]
+
+</div>
 
 # Welp
 Tooling for macOS help books.
@@ -87,6 +92,7 @@ func allTopics(_ query: String) {
 - [Authoring Apple Help](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/ProvidingUserAssitAppleHelp/authoring_help/authoring_help_book.html)
 - [Authoring macOS Help Books in 2020 (and beyond)](https://marioaguzman.wordpress.com/2020/09/12/auth/)
 - [Why won't that help book open](https://eclecticlight.co/2021/11/16/why-wont-that-help-book-open/)
+- [Phel: Publish help books for your Mac apps](https://www.checksimsoftware.com/phel/)
 
 ## Contributing and Collaboration
 
@@ -100,3 +106,5 @@ By participating in this project you agree to abide by the [Contributor Code of 
 
 [build status]: https://github.com/ChimeHQ/Welp/actions
 [build status badge]: https://github.com/ChimeHQ/Welp/workflows/CI/badge.svg
+[matrix]: https://matrix.to/#/%23chimehq%3Amatrix.org
+[matrix badge]: https://img.shields.io/matrix/chimehq%3Amatrix.org?label=Matrix
